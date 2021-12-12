@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -6,6 +7,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {},
+          icon: SvgPicture.asset('assets/icons/bag_1.svg'),
+        ),
       ),
     );
   }
