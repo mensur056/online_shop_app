@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset('assets/icons/bag_1.svg'),
+          icon: SvgPicture.asset('assets/icons/back (1).svg'),
         ),
       ),
     );
