@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
                 .headline5!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-        )
+        ),Categories()
       ],
     );
   }
@@ -36,7 +36,12 @@ class _CategoriesState extends State<Categories> {
       height: 25,
       child: ListView.builder(scrollDirection: Axis.horizontal,
           itemCount: categories.length,
-          itemBuilder: (context, index) => Text(categories[index])),
+          itemBuilder: (context, index) => buildCategories(index)),
     );
   }
+
+  Widget buildCategories(int index) => Padding(
+    padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+    child: Text(categories[index]),
+  );
 }
