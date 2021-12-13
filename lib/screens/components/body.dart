@@ -20,3 +20,17 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+class Categories extends StatefulWidget {
+  @override
+  _CategoriesState createState() => _CategoriesState();
+}
+
+class _CategoriesState extends State<Categories> {
+  List<String> categories = ['Hand bag', 'Jewellery', 'Footwear', 'Dresses'];
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
