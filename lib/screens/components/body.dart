@@ -49,23 +49,32 @@ class _CategoriesState extends State<Categories> {
     );
   }
 
-  Widget buildCategories(int index) => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              categories[index],
-              style: TextStyle(
-                  fontSize: 18,
-                  color: selectedIndex == index ? kTextColor : kTextLightColor),
-            ),
-            Container(
-              height: 2,
-              width: 50,
-              color: selectedIndex == index ? Colors.black : Colors.transparent,
-            )
-          ],
+  Widget buildCategories(int index) => GestureDetector(
+        onTap: () {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                categories[index],
+                style: TextStyle(
+                    fontSize: 18,
+                    color:
+                        selectedIndex == index ? kTextColor : kTextLightColor),
+              ),
+              Container(
+                height: 2,
+                width: 50,
+                color:
+                    selectedIndex == index ? Colors.black : Colors.transparent,
+              )
+            ],
+          ),
         ),
       );
 }
