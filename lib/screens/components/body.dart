@@ -20,30 +20,57 @@ class Body extends StatelessWidget {
           ),
         ),
         Categories(),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: products[0].color,
-                  borderRadius: BorderRadius.circular(16)),
-              height: 180,
-              width: 160,
-              child: Image.asset(products[0].image),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: kDefaultPadding / 4),
-              child: Text(
-                products[0].title,
-                style: TextStyle(color: kTextLightColor),
-              ),
-            ),
-            Text(
-              '\$234',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
-          ],
+        Expanded(
+            child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.75,
+                  mainAxisSpacing: kDefaultPadding,
+                  crossAxisSpacing: kDefaultPadding),
+              itemBuilder: (context, index) => ItemCard(
+                    press: () {},
+                    product: products[index],
+                  )),
+        ))
+      ],
+    );
+  }
+}
+
+class ItemCard extends StatelessWidget {
+  final Product product;
+  final Function press;
+
+  const ItemCard({
+    required this.product,
+    required this.press,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Container(
+            decoration: BoxDecoration(
+                color: product.color, borderRadius: BorderRadius.circular(16)),
+            child: Image.asset(product.image),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 4),
+          child: Text(
+            product.title,
+            style: TextStyle(color: kTextLightColor),
+          ),
+        ),
+        Text(
+          '\$${product.price}',
+          style: TextStyle(fontWeight: FontWeight.bold),
         )
       ],
     );
