@@ -4,7 +4,7 @@ import 'package:online_shop_app/constants.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column(crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -15,7 +15,8 @@ class Body extends StatelessWidget {
                 .headline5!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-        ),Categories()
+        ),
+        Categories()
       ],
     );
   }
@@ -27,21 +28,40 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ['Hand bag', 'Jewellery', 'Footwear', 'Dresses','Other'];
+  List<String> categories = [
+    'Hand bag',
+    'Jewellery',
+    'Footwear',
+    'Dresses',
+    'Other'
+  ];
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 25,
-      child: ListView.builder(scrollDirection: Axis.horizontal,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (context, index) => buildCategories(index)),
     );
   }
 
   Widget buildCategories(int index) => Padding(
-    padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-    child: Text(categories[index],style: TextStyle(fontSize: 20),),
-  );
+        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              categories[index],
+              style: TextStyle(fontSize: 18, color: kTextColor),
+            ),
+            Container(
+              height: 2,
+              width: 50,
+              color: Colors.black,
+            )
+          ],
+        ),
+      );
 }
