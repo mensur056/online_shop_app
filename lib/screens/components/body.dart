@@ -27,7 +27,7 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ['Hand bag', 'Jewellery', 'Footwear', 'Dresses'];
+  List<String> categories = ['Hand bag', 'Jewellery', 'Footwear', 'Dresses','Other'];
   int selectedIndex = 0;
 
   @override
@@ -42,6 +42,6 @@ class _CategoriesState extends State<Categories> {
 
   Widget buildCategories(int index) => Padding(
     padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-    child: Text(categories[index]),
+    child: Text(categories[index],style: TextStyle(fontSize: 20),),
   );
 }
