@@ -20,12 +20,26 @@ class Body extends StatelessWidget {
           ),
         ),
         Categories(),
-        Container(
-          decoration: BoxDecoration(
-              color: products[0].color,
-              borderRadius: BorderRadius.circular(16)),
-          height: 180,
-          width: 160,child: Image.asset(products[0].image),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: products[0].color,
+                  borderRadius: BorderRadius.circular(16)),
+              height: 180,
+              width: 160,
+              child: Image.asset(products[0].image),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: kDefaultPadding / 4),
+              child: Text(
+                products[0].title,
+                style: TextStyle(color: kTextLightColor),
+              ),
+            ),
+          ],
         )
       ],
     );
