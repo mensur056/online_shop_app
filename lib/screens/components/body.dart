@@ -56,7 +56,9 @@ class _CategoriesState extends State<Categories> {
           children: [
             Text(
               categories[index],
-              style: TextStyle(fontSize: 18, color: kTextColor),
+              style: TextStyle(
+                  fontSize: 18,
+                  color: selectedIndex == index ? kTextColor : kTextLightColor),
             ),
             Container(
               height: 2,
