@@ -4,7 +4,8 @@ import 'package:online_shop_app/constants.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -50,7 +51,8 @@ class _CategoriesState extends State<Categories> {
 
   Widget buildCategories(int index) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               categories[index],
@@ -59,7 +61,7 @@ class _CategoriesState extends State<Categories> {
             Container(
               height: 2,
               width: 50,
-              color: Colors.black,
+              color: selectedIndex == index ? Colors.black : Colors.transparent,
             )
           ],
         ),
