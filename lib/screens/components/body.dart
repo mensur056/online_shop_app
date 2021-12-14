@@ -39,6 +39,10 @@ class Body extends StatelessWidget {
                 style: TextStyle(color: kTextLightColor),
               ),
             ),
+            Text(
+              '\$234',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )
           ],
         )
       ],
