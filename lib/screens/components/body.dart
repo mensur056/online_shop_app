@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/constants.dart';
+import 'package:online_shop_app/models/products.dart';
 import 'package:online_shop_app/screens/components/categories.dart';
 
 class Body extends StatelessWidget {
@@ -18,9 +19,13 @@ class Body extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
           ),
         ),
-        Categories()
+        Categories(),
+        Container(
+          decoration: BoxDecoration(color: products[0].color),
+          height: 180,
+          width: 160,
+        )
       ],
     );
   }
 }
-
