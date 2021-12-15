@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/products.dart';
 import 'package:online_shop_app/screens/components/categories.dart';
+import 'package:online_shop_app/screens/details/components/details_screen.dart';
 
 import 'Item_Card.dart';
 
@@ -33,7 +34,12 @@ class Body extends StatelessWidget {
                   mainAxisSpacing: kDefaultPadding,
                   crossAxisSpacing: kDefaultPadding),
               itemBuilder: (context, index) => ItemCard(
-                    press: () {},
+                    press: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailsScreen(
+                                  product: products[index],
+                                ))),
                     product: products[index],
                   )),
         ))
@@ -41,4 +47,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
