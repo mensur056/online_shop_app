@@ -58,7 +58,7 @@ class ItemCard extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
                 color: product.color, borderRadius: BorderRadius.circular(16)),
-            child: Image.asset(product.image),
+            child: Image.asset(product.image,),
           ),
         ),
         Padding(
