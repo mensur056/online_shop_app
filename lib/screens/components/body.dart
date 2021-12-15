@@ -24,9 +24,9 @@ class Body extends StatelessWidget {
         ),
         Categories(),
         Expanded(
-            child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-          child: GridView.builder(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: GridView.builder(
               itemCount: products.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -34,15 +34,20 @@ class Body extends StatelessWidget {
                   mainAxisSpacing: kDefaultPadding,
                   crossAxisSpacing: kDefaultPadding),
               itemBuilder: (context, index) => ItemCard(
-                    press: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => DetailsScreen(
-                                  product: products[index],
-                                ))),
-                    product: products[index],
-                  )),
-        ))
+                product: products[index],
+                press: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsScreen(
+                      product: products[index],
+                    ),
+                  ),
+                ),
+
+              ),
+            ),
+          ),
+        )
       ],
     );
   }
