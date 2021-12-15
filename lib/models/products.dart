@@ -4,6 +4,7 @@ class Product {
   final String image, title, description;
   final int price, size, id;
   final Color color;
+
   Product({
     required this.id,
     required this.image,
@@ -14,6 +15,7 @@ class Product {
     required this.color,
   });
 }
+
 List<Product> products = [
   Product(
       id: 1,
@@ -33,7 +35,7 @@ List<Product> products = [
       color: Color(0xFFD3A984)),
   Product(
       id: 3,
-      title: "Hang Top",
+      title: "Lenovo",
       price: 300,
       size: 10,
       description: dummyText,
@@ -41,23 +43,24 @@ List<Product> products = [
       color: Color(0xFF989493)),
   Product(
       id: 4,
-      title: "Old Fashion",
+      title: "Nokia",
       price: 234,
       size: 11,
       description: dummyText,
       image: "assets/images/phone_4.png",
       color: Color(0xFFE6B398)),
   Product(
-      id: 5,
-      title: "Asus Rog Phone2",
-      price: 983,
-      size: 12,
-      description: dummyText,
-      image: "assets/images/phone_5.png",
-      color: Color(0xFFFB7883)),
+    id: 5,
+    title: "Asus Rog Phone2",
+    price: 983,
+    size: 12,
+    description: dummyText,
+    image: "assets/images/phone_5.png",
+    color: Color(0xFFFB7883),
+  ),
   Product(
     id: 6,
-    title: "Office Code",
+    title: "Samsung ",
     price: 234,
     size: 12,
     description: dummyText,
