@@ -7,6 +7,6 @@ final Product product;
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.black,);
+    return Scaffold(backgroundColor: product.color,);
   }
 }
