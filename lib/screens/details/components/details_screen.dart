@@ -10,15 +10,35 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: product.color,
+      appBar: AppBar(
         backgroundColor: product.color,
-        appBar: AppBar(
-          backgroundColor: product.color,
-          leading: IconButton(
-            icon: SvgPicture.asset('assets/icons/back (1).svg'),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+        elevation: 0,
+        leading: IconButton(
+          icon: SvgPicture.asset(
+            'assets/icons/back (1).svg',
+            color: Colors.white,
           ),
-        ));
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              'assets/icons/search (1).svg',
+              color: Colors.white,
+            ),
+          ), IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              'assets/icons/cart.svg',
+              color: Colors.white,
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
