@@ -30,7 +30,7 @@ List<Product> products = [
   Product(
       id: 2,
       title: "Xiaomi",
-      model: 'Iphone 12 ProMax',
+      model: 'Xiaomi redmi s9',
       price: 256,
       size: 8,
       description: dummyText,
