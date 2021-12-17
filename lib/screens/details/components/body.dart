@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Iphone 12 ProMax',
+                        product.model,
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
