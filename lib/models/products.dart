@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Product {
-  final String image, title, description;
+  final String image, title, description, model;
   final int price, size, id;
   final Color color;
 
   Product({
+    required this.model,
     required this.id,
     required this.image,
     required this.title,
@@ -20,6 +21,7 @@ List<Product> products = [
   Product(
       id: 1,
       title: "Iphone",
+      model: 'Iphone 12 ProMax',
       price: 800,
       size: 12,
       description: dummyText,
@@ -28,6 +30,7 @@ List<Product> products = [
   Product(
       id: 2,
       title: "Xiaomi",
+      model: 'Iphone 12 ProMax',
       price: 256,
       size: 8,
       description: dummyText,
@@ -36,6 +39,7 @@ List<Product> products = [
   Product(
       id: 3,
       title: "Lenovo",
+      model: 'Lenovo Z5 s',
       price: 300,
       size: 10,
       description: dummyText,
@@ -44,6 +48,7 @@ List<Product> products = [
   Product(
       id: 4,
       title: "Nokia",
+      model: 'Nokia 7 Plus',
       price: 234,
       size: 11,
       description: dummyText,
@@ -52,6 +57,7 @@ List<Product> products = [
   Product(
     id: 5,
     title: "Asus",
+    model: 'Asus Rog Phone2',
     price: 983,
     size: 12,
     description: dummyText,
@@ -61,6 +67,7 @@ List<Product> products = [
   Product(
     id: 6,
     title: "Samsung ",
+    model: 'Samsung Galaxy S10',
     price: 234,
     size: 12,
     description: dummyText,
