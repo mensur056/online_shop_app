@@ -27,7 +27,7 @@ List<Product> products = [
       color: Color(0xFF3D82AE)),
   Product(
       id: 2,
-      title: "xiaomi",
+      title: "Xiaomi",
       price: 256,
       size: 8,
       description: dummyText,

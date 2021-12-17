@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/products.dart';
 
 class Body extends StatelessWidget {
@@ -31,20 +32,23 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    Text(
-                      'Iphone 12 ProMax',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    Text(
-                      product.title,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4!
-                          .copyWith(color: Colors.white),
-                    )
-                  ],
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Iphone 12 ProMax',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        product.title,
+                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
