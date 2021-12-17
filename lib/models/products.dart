@@ -27,7 +27,7 @@ List<Product> products = [
       color: Color(0xFF3D82AE)),
   Product(
       id: 2,
-      title: "xiaomi note 9",
+      title: "xiaomi",
       price: 256,
       size: 8,
       description: dummyText,
@@ -51,7 +51,7 @@ List<Product> products = [
       color: Color(0xFFE6B398)),
   Product(
     id: 5,
-    title: "Asus Rog Phone2",
+    title: "Asus",
     price: 983,
     size: 12,
     description: dummyText,
