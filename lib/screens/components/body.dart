@@ -7,15 +7,19 @@ import 'package:online_shop_app/screens/details/components/details_screen.dart';
 import 'Item_Card.dart';
 
 class Body extends StatelessWidget {
+  final String headline1;
+
+  const Body({ required this.headline1});
   @override
   Widget build(BuildContext context) {
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Text(
-            'Women',
+            headline1,
             style: Theme.of(context)
                 .textTheme
                 .headline5!
