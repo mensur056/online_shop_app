@@ -48,7 +48,7 @@ List<Product> products = [
   Product(
     id: 4,
     title: "Nokia",
-    model: 'Nokia 7 Plus',
+    model: 'Nokia 1.4 SmartPhone 32G Grey',
     price: 234,
     size: 11,
     description: dummyText,

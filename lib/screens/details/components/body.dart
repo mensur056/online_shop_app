@@ -49,21 +49,24 @@ class Body extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                    text: 'Price\n',
-                                    style: TextStyle(color: Colors.white)),
-                                TextSpan(
-                                    text: "\$${product.price}",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline4!
-                                        .copyWith(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold))
-                              ],
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 35.0),
+                            child: RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                      text: 'Price\n',
+                                      style: TextStyle(color: Colors.white)),
+                                  TextSpan(
+                                      text: "\$${product.price}",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headline4!
+                                          .copyWith(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold))
+                                ],
+                              ),
                             ),
                           ),
                           Spacer(),
