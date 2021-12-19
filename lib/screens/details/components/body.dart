@@ -39,9 +39,29 @@ class Body extends StatelessWidget {
                   child: Row(
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Color'),
-                          ColorDot(),
+                          Row(
+                            children: [
+                              ColorDot(
+                                color: Color(
+                                  0xFF356C95,
+                                ),
+                                isSelected: true,
+                              ),
+                              ColorDot(
+                                color: Color(
+                                  0xFF356C95,
+                                ),
+                              ),
+                              ColorDot(
+                                color: Color(
+                                  0xFF356C95,
+                                ),
+                              ),
+                            ],
+                          )
                         ],
                       )
                     ],
@@ -58,31 +78,30 @@ class Body extends StatelessWidget {
 }
 
 class ColorDot extends StatelessWidget {
+  final Color color;
+  final bool isSelected;
+
   const ColorDot({
-    Key? key,
-  }) : super(key: key);
+    required this.color,
+    this.isSelected = false,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
-          top: kDefaultPadding / 4,
-          right: kDefaultPadding / 2),
+      margin:
+          EdgeInsets.only(top: kDefaultPadding / 4, right: kDefaultPadding / 2),
       padding: EdgeInsets.all(2.5),
       height: 24,
       width: 24,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
-          color: Color(0xFF356C95),
+          color: isSelected ? color : Colors.transparent,
         ),
       ),
       child: DecoratedBox(
-        decoration: BoxDecoration(
-            color: Color(
-              0xFF356C95,
-            ),
-            shape: BoxShape.circle),
+        decoration: BoxDecoration(color: color, shape: BoxShape.circle),
       ),
     );
   }
