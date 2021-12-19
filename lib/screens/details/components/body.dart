@@ -52,12 +52,12 @@ class Body extends StatelessWidget {
                               ),
                               ColorDot(
                                 color: Color(
-                                  0xFF356C95,
+                                  0xFFF8C078,
                                 ),
                               ),
                               ColorDot(
                                 color: Color(
-                                  0xFF356C95,
+                                  0xFFFA29B9B,
                                 ),
                               ),
                             ],
