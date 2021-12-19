@@ -39,7 +39,30 @@ class Body extends StatelessWidget {
                   child: Row(
                     children: [
                       Column(
-                        children: [Text('Color')],
+                        children: [
+                          Text('Color'),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: kDefaultPadding / 4,
+                                right: kDefaultPadding / 2),
+                            padding: EdgeInsets.all(2.5),
+                            height: 24,
+                            width: 24,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Color(0xFF356C95),
+                              ),
+                            ),
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                  color: Color(
+                                    0xFF356C95,
+                                  ),
+                                  shape: BoxShape.circle),
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),
