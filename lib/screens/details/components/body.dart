@@ -5,6 +5,7 @@ import 'package:online_shop_app/screens/details/components/product_title_with_im
 
 import 'color_and_size.dart';
 import 'color_dot.dart';
+import 'description.dart';
 
 class Body extends StatelessWidget {
   final Product product;
@@ -42,14 +43,8 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: [
                       ColorAndSize(product: product),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: kDefaultPadding),
-                        child: Text(
-                          product.description,
-                          style: TextStyle(height: 1.5),
-                        ),
-                      )
+                      Description(product: product),
+                      CardCounter()
                     ],
                   ),
                 ),
@@ -59,6 +54,33 @@ class Body extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class CardCounter extends StatefulWidget {
+  @override
+  _CardCounterState createState() => _CardCounterState();
+}
+
+class _CardCounterState extends State<CardCounter> {
+  int numOfItems = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        SizedBox(
+          height: 32,
+          width: 40,
+          child: OutlineButton(
+            onPressed: () {},
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+            child: Icon(Icons.remove),
+          ),
+        )
+      ],
     );
   }
 }
