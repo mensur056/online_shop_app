@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/products.dart';
 import 'package:online_shop_app/screens/details/components/product_title_with_image.dart';
@@ -45,7 +46,20 @@ class Body extends StatelessWidget {
                     children: [
                       ColorAndSize(product: product),
                       Description(product: product),
-                      CardCounter()
+                      Row(
+                        children: [
+                          CardCounter(),
+                          Container(
+                            padding: EdgeInsets.all(8),
+                            height: 32,
+                            width: 32,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFFFF6464)),
+                            child: SvgPicture.asset('assets/icons/heart.svg'),
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),
@@ -58,4 +72,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
