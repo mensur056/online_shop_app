@@ -70,14 +70,27 @@ class _CardCounterState extends State<CardCounter> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        buildOutlineButton(icon: Icons.remove, press: () {}),
+        buildOutlineButton(
+            icon: Icons.remove,
+            press: () {setState(() {
+              numOfItems--;
+            });
+
+            }),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
           child: Text(
-            '01',
+            numOfItems.toString().padLeft(2, '0'),
             style: Theme.of(context).textTheme.headline6,
           ),
-        )
+        ),
+        buildOutlineButton(
+            icon: Icons.add,
+            press: () {
+              setState(() {
+                numOfItems++;
+              });
+            })
       ],
     );
   }
