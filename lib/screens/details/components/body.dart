@@ -3,6 +3,8 @@ import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/products.dart';
 import 'package:online_shop_app/screens/details/components/product_title_with_image.dart';
 
+import 'color_dot.dart';
+
 class Body extends StatelessWidget {
   final Product product;
 
@@ -77,32 +79,3 @@ class Body extends StatelessWidget {
   }
 }
 
-class ColorDot extends StatelessWidget {
-  final Color color;
-  final bool isSelected;
-
-  const ColorDot({
-    required this.color,
-    this.isSelected = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin:
-          EdgeInsets.only(top: kDefaultPadding / 4, right: kDefaultPadding / 2),
-      padding: EdgeInsets.all(2.5),
-      height: 24,
-      width: 24,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: isSelected ? color : Colors.transparent,
-        ),
-      ),
-      child: DecoratedBox(
-        decoration: BoxDecoration(color: color, shape: BoxShape.circle),
-      ),
-    );
-  }
-}
