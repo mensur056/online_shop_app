@@ -7,6 +7,7 @@ import 'package:online_shop_app/screens/details/components/product_title_with_im
 import 'card_counter.dart';
 import 'color_and_size.dart';
 import 'color_dot.dart';
+import 'counter_with_fav_btn.dart';
 import 'description.dart';
 
 class Body extends StatelessWidget {
@@ -46,20 +47,7 @@ class Body extends StatelessWidget {
                     children: [
                       ColorAndSize(product: product),
                       Description(product: product),
-                      Row(
-                        children: [
-                          CardCounter(),
-                          Container(
-                            padding: EdgeInsets.all(8),
-                            height: 32,
-                            width: 32,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xFFFF6464)),
-                            child: SvgPicture.asset('assets/icons/heart.svg'),
-                          )
-                        ],
-                      )
+                      CounterWithFavBtn()
                     ],
                   ),
                 ),
