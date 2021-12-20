@@ -70,17 +70,28 @@ class _CardCounterState extends State<CardCounter> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
-          height: 32,
-          width: 40,
-          child: OutlineButton(
-            onPressed: () {},
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
-            child: Icon(Icons.remove),
+        buildOutlineButton(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: Text(
+            '01',
+            style: Theme.of(context).textTheme.headline6,
           ),
         )
       ],
+    );
+  }
+
+  SizedBox buildOutlineButton() {
+    return SizedBox(
+      height: 32,
+      width: 40,
+      child: OutlineButton(
+        padding: EdgeInsets.zero,
+        onPressed: () {},
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+        child: Icon(Icons.remove),
+      ),
     );
   }
 }
