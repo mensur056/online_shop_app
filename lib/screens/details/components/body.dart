@@ -70,9 +70,9 @@ class _CardCounterState extends State<CardCounter> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        buildOutlineButton(),
+        buildOutlineButton(icon: Icons.remove, press: () {}),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
           child: Text(
             '01',
             style: Theme.of(context).textTheme.headline6,
@@ -82,15 +82,16 @@ class _CardCounterState extends State<CardCounter> {
     );
   }
 
-  SizedBox buildOutlineButton() {
+  SizedBox buildOutlineButton(
+      {required IconData icon, required VoidCallback press}) {
     return SizedBox(
       height: 32,
       width: 40,
       child: OutlineButton(
         padding: EdgeInsets.zero,
-        onPressed: () {},
+        onPressed: press,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
-        child: Icon(Icons.remove),
+        child: Icon(icon),
       ),
     );
   }
