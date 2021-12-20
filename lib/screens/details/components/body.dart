@@ -3,6 +3,7 @@ import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/products.dart';
 import 'package:online_shop_app/screens/details/components/product_title_with_image.dart';
 
+import 'color_and_size.dart';
 import 'color_dot.dart';
 
 class Body extends StatelessWidget {
@@ -40,46 +41,7 @@ class Body extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Row(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Color'),
-                              Row(
-                                children: [
-                                  ColorDot(
-                                    color: Color(
-                                      0xFF356C95,
-                                    ),
-                                    isSelected: true,
-                                  ),
-                                  ColorDot(
-                                    color: Color(
-                                      0xFFF8C078,
-                                    ),
-                                  ),
-                                  ColorDot(
-                                    color: Color(
-                                      0xFFFA29B9B,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),RichText(
-                            text: TextSpan(
-                                style: TextStyle(color: kTextColor),
-                                children: [
-                                  TextSpan(text: 'Size\n'),
-                                  TextSpan(
-                                      text: '${product.size}',
-                                      style: Theme.of(context).textTheme.headline5)
-                                ]),
-                          )
-
-                        ],
-                      ),
+                      ColorAndSize(product: product),
                     ],
                   ),
                 ),
@@ -92,3 +54,4 @@ class Body extends StatelessWidget {
     );
   }
 }
+
