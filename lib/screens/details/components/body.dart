@@ -42,6 +42,14 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: [
                       ColorAndSize(product: product),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: kDefaultPadding),
+                        child: Text(
+                          product.description,
+                          style: TextStyle(height: 1.5),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -54,4 +62,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
