@@ -47,7 +47,22 @@ class Body extends StatelessWidget {
                     children: [
                       ColorAndSize(product: product),
                       Description(product: product),
-                      CounterWithFavBtn()
+                      CounterWithFavBtn(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: kDefaultPadding),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 58,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(18),
+                                  border: Border.all(color: product.color)),
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
