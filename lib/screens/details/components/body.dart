@@ -57,8 +57,14 @@ class Body extends StatelessWidget {
                               height: 50,
                               width: 58,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(18),
-                                  border: Border.all(color: product.color)),
+                                borderRadius: BorderRadius.circular(18),
+                                border: Border.all(color: product.color),
+                              ),
+                              child: IconButton(
+                                icon: SvgPicture.asset(
+                                    'assets/icons/add_to_cart.svg'),
+                                onPressed: () {},
+                              ),
                             )
                           ],
                         ),
