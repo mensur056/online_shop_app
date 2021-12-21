@@ -65,6 +65,18 @@ class Body extends StatelessWidget {
                                     'assets/icons/add_to_cart.svg'),
                                 onPressed: () {},
                               ),
+                            ),
+                            SizedBox(
+                              height: 50,
+                              child: FlatButton(
+                                onPressed: () {},
+                                child: Text(
+                                  'Buy Now',
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
                             )
                           ],
                         ),
