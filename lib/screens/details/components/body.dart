@@ -69,10 +69,12 @@ class Body extends StatelessWidget {
                             SizedBox(
                               height: 50,
                               child: FlatButton(
+                                color: product.color,
                                 onPressed: () {},
                                 child: Text(
-                                  'Buy Now',
+                                  'Buy Now'.toUpperCase(),
                                   style: TextStyle(
+                                      color: Colors.white,
                                       fontSize: 17,
                                       fontWeight: FontWeight.bold),
                                 ),
