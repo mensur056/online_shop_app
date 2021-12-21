@@ -35,7 +35,7 @@ List<Product> products = [
       size: 8,
       description: dummyText,
       image: "assets/images/phone_2.png",
-      color: Color(0xFFD3A984)),
+      color: Color(0xFFec6410)),
   Product(
       id: 3,
       title: "Lenovo",
@@ -53,7 +53,7 @@ List<Product> products = [
     size: 11,
     description: dummyText,
     image: "assets/images/phone_4.png",
-    color: Color(0xFFE6B398),
+    color: Color(0xFFe9286f),
   ),
   Product(
     id: 5,
@@ -73,7 +73,7 @@ List<Product> products = [
     size: 12,
     description: dummyText,
     image: "assets/images/phone_6.png",
-    color: Color(0xFFAEAEAE),
+    color: Color(0xFF9b1fe9),
   ),
 ];
 String dummyText =
