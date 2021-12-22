@@ -14,15 +14,20 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(onTap: press,
+    return GestureDetector(
+      onTap: press,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                  color: product.color, borderRadius: BorderRadius.circular(16)),
-              child: Image.asset(product.image,),
+                  color: product.color,
+                  borderRadius: BorderRadius.circular(16)),
+              child: Hero(tag: '${product.id}',
+                  child: Image.asset(
+                product.image,
+              )),
             ),
           ),
           Padding(

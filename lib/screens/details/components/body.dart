@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(top: kDefaultPadding),
+                    padding: const EdgeInsets.only(top: kDefaultPadding*2),
                     child: Column(
                       children: [
                         ColorAndSize(product: product),
