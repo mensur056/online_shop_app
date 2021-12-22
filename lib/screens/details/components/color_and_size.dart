@@ -3,6 +3,7 @@ import 'package:online_shop_app/models/products.dart';
 
 import '../../../constants.dart';
 import 'color_dot.dart';
+
 class ColorAndSize extends StatelessWidget {
   const ColorAndSize({
     Key? key,
@@ -19,7 +20,7 @@ class ColorAndSize extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Color'),
+              Text('Color',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 20)),
               Row(
                 children: [
                   ColorDot(
@@ -43,20 +44,18 @@ class ColorAndSize extends StatelessWidget {
             ],
           ),
         ),
+        Spacer(),
         Expanded(
           child: RichText(
-            text: TextSpan(
-                style: TextStyle(color: kTextColor),
-                children: [
-                  TextSpan(text: 'Size\n'),
-                  TextSpan(
-                      text: '${product.size}in',
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline5!
-                          .copyWith(
-                          fontWeight: FontWeight.bold))
-                ]),
+            text: TextSpan(style: TextStyle(color: kTextColor), children: [
+              TextSpan(text: 'Size\n', style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 20)),
+              TextSpan(
+                  text: '${product.size}in',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5!
+                      .copyWith(fontWeight: FontWeight.bold))
+            ]),
           ),
         )
       ],
