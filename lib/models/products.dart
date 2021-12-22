@@ -23,7 +23,7 @@ List<Product> products = [
       title: "Iphone",
       model: 'Iphone 13 ProMax',
       price: 2690,
-      size: 5.8,
+      size: 6.1,
       description: dummyText,
       image: "assets/images/phone_1.png",
       color: Color(0xFF3D82AE)),
