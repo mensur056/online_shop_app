@@ -75,6 +75,42 @@ List<Product> products = [
     image: "assets/images/phone_6.png",
     color: Color(0xFF9b1fe9),
   ),
+  Product(
+      id: 7,
+      title: "Iphone",
+      model: 'Iphone 13 ProMax',
+      price: 2690,
+      size: 6.1,
+      description: dummyText,
+      image: "assets/images/phone_7.png",
+      color: Color(0xFF3D82AE)),
+  Product(
+      id: 8,
+      title: "Iphone",
+      model: 'Iphone 13 ProMax',
+      price: 2690,
+      size: 6.1,
+      description: dummyText,
+      image: "assets/images/phone_8.png",
+      color: Color(0xFF3D82AE)),
+  Product(
+      id: 9,
+      title: "Iphone",
+      model: 'Iphone 13 ProMax',
+      price: 2690,
+      size: 6.1,
+      description: dummyText,
+      image: "assets/images/phone_9.png",
+      color: Color(0xFF3D82AE)),
+  Product(
+      id: 10,
+      title: "Iphone",
+      model: 'Iphone 13 ProMax',
+      price: 2690,
+      size: 6.1,
+      description: dummyText,
+      image: "assets/images/phone_10.png",
+      color: Color(0xFF3D82AE)),
 ];
 String dummyText =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";
