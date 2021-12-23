@@ -40,7 +40,7 @@ class ProductTitleWithImage extends StatelessWidget {
                           text: 'Price\n',
                           style: TextStyle(color: Colors.white)),
                       TextSpan(
-                          text: "\$${product.price}",
+                          text: "${product.price} AZN",
                           style: Theme.of(context)
                               .textTheme
                               .headline4!

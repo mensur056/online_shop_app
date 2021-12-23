@@ -5,6 +5,7 @@ class Product {
   final double price, size, id;
   final Color color;
 
+
   Product({
     required this.model,
     required this.id,
@@ -24,7 +25,7 @@ List<Product> products = [
       model: 'Iphone 13 ProMax',
       price: 2690,
       size: 6.1,
-      description: dummyText,
+      description: iphoneText,
       image: "assets/images/phone_1.png",
       color: Color(0xFF3D82AE)),
   Product(
@@ -33,7 +34,7 @@ List<Product> products = [
       model: 'Xiaomi redmi note 9s',
       price: 460,
       size: 6.3,
-      description: dummyText,
+      description: iphoneText,
       image: "assets/images/phone_2.png",
       color: Color(0xFFec6410)),
   Product(
@@ -42,7 +43,7 @@ List<Product> products = [
       model: 'Lenovo Z5 s',
       price: 440,
       size: 6.39,
-      description: dummyText,
+      description: iphoneText,
       image: "assets/images/phone_3.png",
       color: Color(0xFF989493)),
   Product(
@@ -51,7 +52,7 @@ List<Product> products = [
     model: 'Nokia 1.4 SmartPhone 32G Grey',
     price: 360,
     size: 5.5,
-    description: dummyText,
+    description: iphoneText,
     image: "assets/images/phone_4.png",
     color: Color(0xFFe9286f),
   ),
@@ -61,7 +62,7 @@ List<Product> products = [
     model: 'Asus Rog Phone2',
     price: 2320,
     size: 6.7,
-    description: dummyText,
+    description: iphoneText,
     image: "assets/images/phone_5.png",
     color: Color(0xFFFB7883),
   ),
@@ -71,7 +72,7 @@ List<Product> products = [
     model: 'Samsung Galaxy S10',
     price: 1550,
     size: 5.8,
-    description: dummyText,
+    description: iphoneText,
     image: "assets/images/phone_6.png",
     color: Color(0xFF9b1fe9),
   ),
@@ -81,7 +82,7 @@ List<Product> products = [
       model: 'OnePlus Nord ',
       price: 820,
       size: 6.1,
-      description: dummyText,
+      description: iphoneText,
       image: "assets/images/phone_7.png",
       color: Color(0xFF3D82AE)),
   Product(
@@ -90,7 +91,7 @@ List<Product> products = [
       model: 'Sony Xperia',
       price: 330,
       size: 6.1,
-      description: dummyText,
+      description:xiaomiText,
       image: "assets/images/phone_8.png",
       color: Color(0xFF3D82AE)),
   Product(
@@ -99,7 +100,7 @@ List<Product> products = [
       model: 'Oppo A53',
       price: 790,
       size: 6.1,
-      description: dummyText,
+      description:xiaomiText ,
       image: "assets/images/phone_9.png",
       color: Color(0xFF3D82AE)),
   Product(
@@ -108,9 +109,11 @@ List<Product> products = [
       model: 'Casper via a4',
       price: 640,
       size: 6.1,
-      description: dummyText,
+      description: iphoneText,
       image: "assets/images/phone_10.png",
       color: Color(0xFF3D82AE)),
 ];
-String dummyText =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";
+String iphoneText =
+    "The main features of the Pro models will be that they will be equipped with OLED screens with 120 Hz image update. In addition, the iPhone 13 models are expected to be equipped with slightly larger batteries. According to insiders, the iPhone 13 mini will sell for  699, the iPhone 13 for  799, the iPhone 13 Pro for 999, and the iPhone 13 Pro Max for  1,099. In addition, on September 30, Apple may launch AirPods 3 headphones. The headphones are expected to be designed in the style of the AirPods Pro.";
+String xiaomiText =
+    "Əlavə xüsusiyyətlər";

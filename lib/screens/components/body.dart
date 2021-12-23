@@ -9,10 +9,10 @@ import 'Item_Card.dart';
 class Body extends StatelessWidget {
   final String headline1;
 
-  const Body({ required this.headline1});
+  const Body({required this.headline1});
+
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -40,14 +40,28 @@ class Body extends StatelessWidget {
               itemBuilder: (context, index) => ItemCard(
                 product: products[index],
                 press: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                      product: products[index],
-                    ),
-                  ),
-                ),
-
+                    context,
+                    PageRouteBuilder(
+                        transitionDuration: Duration(seconds: 2),
+                        transitionsBuilder: (BuildContext context,
+                            Animation<double> animation,
+                            Animation<double> secAnimation,
+                            Widget child) {
+                          animation = CurvedAnimation(
+                            parent: animation,
+                            curve: Curves.elasticInOut,
+                          );
+                          return ScaleTransition(
+                            scale: animation,
+                            child: child,
+                            alignment: Alignment.center,
+                          );
+                        },
+                        pageBuilder: (BuildContext context,
+                            Animation<double> animation,
+                            Animation<double> secAnimation) {
+                          return DetailsScreen(product: products[index]);
+                        })),
               ),
             ),
           ),

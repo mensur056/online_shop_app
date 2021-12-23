@@ -23,10 +23,10 @@ class HomeScreen extends StatelessWidget {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset('assets/icons/search (1).svg',color: kTextColor,),
+          icon: SvgPicture.asset('assets/icons/search (1).svg',color: kTextColor),
         ), IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset('assets/icons/cart.svg',color: kTextColor,),
+          icon: SvgPicture.asset('assets/icons/cart.svg',color: kTextColor),
         ),SizedBox(width: kDefaultPadding/2,)
       ],
     );

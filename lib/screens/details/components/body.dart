@@ -46,24 +46,27 @@ class Body extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(top: kDefaultPadding*2.5),
-                    child: Column(
-                      children: [
-                        ColorAndSize(product: product),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ColorAndSize(product: product),
 
-                        Description(product: product),
-                        SizedBox(
-                          height: kDefaultPadding / 2,
-                        ),
-                        CounterWithFavBtn(),
-                        SizedBox(
-                          height: kDefaultPadding / 2,
-                        ),
-                        AddToCart(product: product)
-                      ],
+                          Description(product: product),
+                          SizedBox(
+                            height: kDefaultPadding / 2,
+                          ),
+                          CounterWithFavBtn(),
+                          SizedBox(
+                            height: kDefaultPadding / 2,
+                          ),
+                          AddToCart(product: product)
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                ProductTitleWithImage(product: product)
+                ProductTitleWithImage(product: product),
+
               ],
             ),
           )
