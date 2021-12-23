@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:online_shop_app/constants.dart';
 import 'package:online_shop_app/models/products.dart';
 import 'package:online_shop_app/screens/details/components/product_title_with_image.dart';
-
 import 'add_to_cart.dart';
-import 'card_counter.dart';
 import 'color_and_size.dart';
-import 'color_dot.dart';
 import 'counter_with_fav_btn.dart';
 import 'description.dart';
 
@@ -45,12 +41,12 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(top: kDefaultPadding*2.5),
+                    padding:
+                        const EdgeInsets.only(top: kDefaultPadding * 2.5),
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
                           ColorAndSize(product: product),
-
                           Description(product: product),
                           SizedBox(
                             height: kDefaultPadding / 2,
@@ -66,7 +62,6 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 ProductTitleWithImage(product: product),
-
               ],
             ),
           )
