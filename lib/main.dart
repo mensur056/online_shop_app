@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop_app/constants.dart';
+import 'package:online_shop_app/screens/home_screen.dart';
 
 import 'test/test_home_screen.dart';
 
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
             textTheme:
                 Theme.of(context).textTheme.apply(bodyColor: kTextColor)),
-        home: HomeScreenTest());
+        home: HomeScreen());
   }
 }

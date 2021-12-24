@@ -8,8 +8,9 @@ import 'Item_Card.dart';
 
 class Body extends StatelessWidget {
   final String headline1;
+  final int index;
 
-  const Body({required this.headline1});
+  const Body({required this.headline1, required this.index});
 
   @override
   Widget build(BuildContext context) {
